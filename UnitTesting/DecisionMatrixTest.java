@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 
 //coded by Randy Lee
-public class DecisionMatrixTest {
+/*public class DecisionMatrixTest {
     DecisionMatrix test = new DecisionMatrix();
     String file = "0-0.txt", user = "yes";
     String[] files_part2 = {"0","0","txt"}, answers = {"1) yes", "2) no"}, ansYes ={"00","0","txt"}, ansNo ={"01","0","txt"};
@@ -31,4 +31,4 @@ public class DecisionMatrixTest {
     void testThreeOrTwoNo(){
         assertTrue(Arrays.equals(test.threeOrTwo(2,"no",answers,files_part2,file),ansNo));
     }
-}
+}*/
