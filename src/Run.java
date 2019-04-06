@@ -159,7 +159,6 @@ public class Run {
 	}
 
 	void Bot() {
-		System.out.println(getFile());
 		gui.print(getQuestions().get(getFile()).getQuestion()); //print question
 		convo.push("Chatbot: "+getQuestions().get(getFile()).getQuestion()); //add bot output to convo log
 	}

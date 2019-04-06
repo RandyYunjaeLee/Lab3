@@ -10,14 +10,12 @@ public class GUI implements ActionListener {
 	UserInput ui;
 
 	JFrame frame;
-	JPanel panel;
 	JButton button;
 	JTextArea ChatWindow;
 	JTextField UserInput;
 	JScrollPane scroll;
 
 	String userInput;
-	static boolean inputbool = false;
 	String[] unknown={"I didn't get that, try again.", "Okay, not sure how that relates to the question, try that again",
 	"Error in response you want to try that again?", "Didn't quite get that can you say that again?", "Sorry that confused me a little"};
 
@@ -67,7 +65,7 @@ public class GUI implements ActionListener {
 	private void openWindow() {
 		frame.setTitle("Chatbot.exe");
 
-		frame.setSize(800,800);
+		frame.setSize(500,770);
 		frame.setLayout(new BorderLayout());
 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -77,11 +75,11 @@ public class GUI implements ActionListener {
 		ChatWindow = new JTextArea();
 		ChatWindow.setEditable(false);
 		scroll = new JScrollPane(ChatWindow);
-		scroll.setPreferredSize(new Dimension(750,700));
+		scroll.setPreferredSize(new Dimension(500,700));
 	}
 	private void setUserText() {
 		UserInput = new JTextField();
-		UserInput.setPreferredSize(new Dimension(675,60));
+		UserInput.setPreferredSize(new Dimension(375,10));
 		UserInput.addActionListener(this);
 	}
 	private void makeButton() {
@@ -100,7 +98,7 @@ public class GUI implements ActionListener {
 	}
 	public void exit() throws InterruptedException {
 		ChatWindow.append("\nSystem Exiting");
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		System.exit(0);
 	}
 }
