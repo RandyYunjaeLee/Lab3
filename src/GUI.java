@@ -75,6 +75,7 @@ public class GUI implements ActionListener {
 		ChatWindow = new JTextArea();
 		ChatWindow.setEditable(false);
 		scroll = new JScrollPane(ChatWindow);
+		ChatWindow.setAutoscrolls(true);
 		scroll.setPreferredSize(new Dimension(500,700));
 	}
 	private void setUserText() {
@@ -85,6 +86,8 @@ public class GUI implements ActionListener {
 	private void makeButton() {
 		button = new JButton("Send");
 		button.setPreferredSize(new Dimension(100,30));
+		button.setBackground(Color.BLUE);
+		button.setForeground(Color.white);
 		button.addActionListener(this);
 	}
 
