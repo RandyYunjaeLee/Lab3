@@ -1,0 +1,6 @@
+00
+0
+Is there anything on screen?
+2
+1) yes
+2) no

@@ -83,13 +83,17 @@ public class Run {
 				ui.setInput(gui.getUserInput());
 				setUser(ui.getInput2(gui));
 				convo.push("User: "+getUser());
-				if(getUser().contains("internet")) {
+				if(getUser().contains("net")) {
 					setSelection(1);
 					initializeTree();
 					break;
 				}
 				else if(getUser().contains("phone")) {
 					setSelection(2);
+					initializeTree();
+					break; }
+				else if(getUser().contains("tv")) {
+					setSelection(3);
 					initializeTree();
 					break; }
 				else {
@@ -155,6 +159,7 @@ public class Run {
 	}
 
 	void Bot() {
+		System.out.println(getFile());
 		gui.print(getQuestions().get(getFile()).getQuestion()); //print question
 		convo.push("Chatbot: "+getQuestions().get(getFile()).getQuestion()); //add bot output to convo log
 	}

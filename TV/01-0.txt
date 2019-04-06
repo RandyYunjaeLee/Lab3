@@ -1,0 +1,6 @@
+01
+0
+You will have to set up a technician to come to help you, anything else?
+2
+1) yes
+2) no

@@ -27,7 +27,7 @@ class StackHandlerTest {
         // Setup
         StackHandler sh = new StackHandler(); 
         Stack<String> path = sh.initFileLog();
-        String first = "001-0.txt";
+        String first = "000-0.txt";
         String second = "newline";
         // Execution
         path.push(first);

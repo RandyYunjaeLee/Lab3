@@ -67,7 +67,7 @@ public class GUI implements ActionListener {
 	private void openWindow() {
 		frame.setTitle("Chatbot.exe");
 
-		frame.setSize(600,600);
+		frame.setSize(800,800);
 		frame.setLayout(new BorderLayout());
 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -77,16 +77,16 @@ public class GUI implements ActionListener {
 		ChatWindow = new JTextArea();
 		ChatWindow.setEditable(false);
 		scroll = new JScrollPane(ChatWindow);
-		scroll.setPreferredSize(new Dimension(550,500));
+		scroll.setPreferredSize(new Dimension(750,700));
 	}
 	private void setUserText() {
 		UserInput = new JTextField();
-		UserInput.setPreferredSize(new Dimension(475,60));
+		UserInput.setPreferredSize(new Dimension(675,60));
 		UserInput.addActionListener(this);
 	}
 	private void makeButton() {
 		button = new JButton("Send");
-		button.setPreferredSize(new Dimension(100,40));
+		button.setPreferredSize(new Dimension(100,30));
 		button.addActionListener(this);
 	}
 

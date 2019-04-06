@@ -31,11 +31,14 @@ public class DecisionMatrix {
   public String anythingElse(GUI gui, String userInput){
       //if the word says answer 1 point to begin the loop again
       if(userInput.contains("yes")){
+
         return "loop-0.txt";
       }
       //if the word says answer 2 point to end the program
       else if(userInput.contains("no")){
-        return "end-0.txt";
+        String s = "end-0.txt";
+        System.out.println(s);
+        return s;
       }else {
         gui.print(tryAgain[(int)Math.floor(Math.random()*5)]);
         return "anythingElse-0.txt";
@@ -58,6 +61,7 @@ public class DecisionMatrix {
       gui.print(tryAgain[(int)Math.floor(Math.random()*5)]);
       return letsSplit(file);
     }
+
     return files_part2;
   }
   public String Decision(GUI gui, String userInput, String file, int selection) throws FileNotFoundException {
@@ -71,6 +75,9 @@ public class DecisionMatrix {
     }
     else if(selection==2){
       f = new File("Phone");
+    }
+    else if(selection==3){
+      f = new File("TV");
     }
     for(File check: f.listFiles()){
       if(check.getName().equals(file)){
@@ -102,7 +109,7 @@ public class DecisionMatrix {
     }
     if(check.contains("anything else"))
     {
-        return anythingElse(gui, userInput);
+      return anythingElse(gui, userInput);
     }
     if(i>1){
       files_part2 = threeOrTwo(gui, i, userInput, answers, files_part2, file);
@@ -115,6 +122,7 @@ public class DecisionMatrix {
     }
     //decision = path, priority and file type
     decision = files_part2[0]+"-"+files_part2[1]+".txt";
+    System.out.println(decision);
     return decision;
   }
 }

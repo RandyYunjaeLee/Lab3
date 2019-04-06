@@ -1,0 +1,6 @@
+0
+0
+Do you know your activation ID?
+2
+1) yes
+2) no
