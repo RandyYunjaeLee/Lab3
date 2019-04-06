@@ -37,7 +37,6 @@ public class DecisionMatrix {
       //if the word says answer 2 point to end the program
       else if(userInput.contains("no")){
         String s = "end-0.txt";
-        System.out.println(s);
         return s;
       }else {
         gui.print(tryAgain[(int)Math.floor(Math.random()*5)]);
